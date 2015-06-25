@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>中文</title>
+</head>
+
+<body>
+  <form action="http://example.microsoft.com/sample.asp" method="post">
+    Enter your name:
+      <input name="FName" id="FName" onfocus="fnSetStyle()" onfocusout="fnOnfocusout()" onpaste="fnOnpaste()" onfocusin="fnOnfocusin()"><br />
+    Favorite Ice Cream Flavor:
+        <select name="Flavor">
+          <option value="Chocolate">
+          Chocolate
+          
+          <option value="Strawberry">
+          Strawberry
+          
+          <option value="Vanilla" selected>
+          Vanilla
+        </select>
+    <p><input type="submit"></p>
+  </form>
+<script type="text/javascript">  
+    function fnSetStyle(){
+        alert(event.srcElement.id);
+        alert("onfocus");
+    }
+    
+    function fnOnfocusout(){
+        //alert(event.srcElement.id);
+        alert("fnOnfocusout");
+    }
+    
+    function fnOnpaste(){
+        alert("fnOnpaste");
+    }
+    
+    function fnOnfocusin(){
+        alert("fnOnfocusin");
+    }
+</script>
+</body>
+
+</html>
